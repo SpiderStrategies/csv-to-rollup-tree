@@ -1,0 +1,33 @@
+{
+  "label" : "Root",
+  "key" : "Root",
+  "children" : [ {
+    "label" : "PA",
+    "key" : "PA",
+    "children" : [ {
+      "label" : "Butler",
+      "key" : "Butler",
+      "children" : [ {
+        "label" : "Mars",
+        "key" : "Mars",
+        "children" : [ {
+          "label" : "16046",
+          "key" : "16046",
+          "children" : [ ]
+        } ]
+      } ]
+    }, {
+      "label" : "Lawrence",
+      "key" : "Lawrence",
+      "children" : [ {
+        "label" : "New Castle",
+        "key" : "New Castle",
+        "children" : [ {
+          "label" : "16102",
+          "key" : "16102",
+          "children" : [ ]
+        } ]
+      } ]
+    } ]
+  } ]
+}
