@@ -54,7 +54,7 @@ public class CSVtoJSON {
 				if (!val.isEmpty() && !createdKeys.contains(val)) {
 					//Create a new TreeNode
 					TreeNode tn = new TreeNode();
-					tn.setKey(val);
+					tn.setKey(getKey(val));
 					tn.setLabel(val);
 					createdKeys.add(val);
 
@@ -78,5 +78,17 @@ public class CSVtoJSON {
 		ObjectMapper objectMapper = new ObjectMapper();
 		objectMapper.configure(SerializationConfig.Feature.INDENT_OUTPUT, true);
 		return objectMapper.writeValueAsString(lastItemAtDepths.get(0));
+	}
+
+	//Keys can be included within parenthesis
+	public static String getKey(String label){
+		int startOfId = label.lastIndexOf("(") + 1;
+		if(startOfId > 0) {
+			label = label.substring(startOfId, label.length() - 1);
+			if(label.contains(",")) {
+				return label.split(",")[0];
+			}
+		}
+		return label.trim();
 	}
 }
